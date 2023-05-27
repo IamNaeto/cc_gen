@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
 </head>
 <body>
     <!-- Nav Section -->
@@ -13,12 +15,22 @@
         <div class="hero-logo">
             <img src="img/Logo.png" alt="">
         </div>
-        <div class="hero-nav">
+        <div class="hero-nav nav-links" id="nav-links">
+            <div class="nav-left">
             <li><a href="index.html">Home</a></li>
             <li><a href="card-library.html">Card Library</a></li>
             <li><a href="#">Documentations</a></li>
-            <li class="signin"><a href="#">Sign In</a></li>
-            <button class="herobtn1"><a href="#">Register</a></button>
+            </div>
+            <div class="nav-right">
+                <li class="signin"><a href="#">Sign In</a></li>
+            <button class="herobtn1 navbtn"><a href="#">Register</a></button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <div class="hamburger-menu">
+              <div class="ham-bar bar-top"></div>
+              <div class="ham-bar bar-mid"></div>
+              <div class="ham-bar bar-bottom"></div>
         </div>
     </nav>
 
@@ -29,7 +41,7 @@
             <p>We help you create dummy credit card samples with card numbers, CVV, and card name - for eCommerce data testing purposes.</p>
             <button class="herobtn"><a href="#">Get Started</a></button>
         </div>
-        <div>
+        <div class="heroImg-container">
             <img src="img/heroimage.png" alt="" class="heroimg">
         </div>
     </section>
@@ -51,7 +63,7 @@
 
     <!-- Billy Section -->
     <section class="billy">
-        <div>
+        <div class="billy-container">
             <img src="img/billy.png" alt="" class="billy-img">
         </div>
         <div class="billy-content">
@@ -62,7 +74,7 @@
 
     <!-- Features -->
     <section class="features">
-        <div>
+        <div class="features-text">
             <h2>Features</h2>
             <ul>
                 <li>Generate thousands of dummy credit card numbers & details using our free bulk generator tool.</li>
@@ -72,14 +84,14 @@
                 <li>Suitable for all forms of data testing and verification purposes such as Stripe & PayPal Payments.</li>
             </ul>
         </div>
-        <div>
+        <div class="features-img">
             <img src="img/karim.png" alt="" class="karim-img">
         </div>
     </section>
 
     <!-- Others Think Section -->
     <section class="others-think">
-        <div>
+        <div class="users">
             <div class="container one">
                 <img src="img/user1.png" alt=""><h3>Card café is the best. I love the card designs, the navigation is simple and the platform is easy to use.</h3>
             </div>
@@ -101,7 +113,7 @@
         <h2>Frequently Asked Questions</h2>
         <h3>If you are not sure weather draft is suitable for you or not, do not worry. We are here to explain everything you might want to know</h3>
 
-        <div>
+        <div class="questions">
             <h4>What is a credit card generator? <img src="img/Plus-icon 1.png" alt="" class="plus one-plus" >
             <span><br /> A  credit card generator creates valid credit card numbers that can be used for software data testing and other verification purposes. They cannot be used to purchase anything.</span></h4>
             <h4>How does a credit card generator work? <img src="img/Plus-icon 1.png" alt="" class="plus two-plus">
@@ -125,16 +137,18 @@
             </div>
             <div class="socials">
                 <a href="#">
-                    <img src="img/faceboook.png" alt="">
+                    <i class="fa fa-facebook-square" ></i>
                 </a>
                 <a href="#">
-                    <img src="img/twitter.png" alt="">
+                    <i class="fa fa-twitter-square" ></i>
                 </a>
                 <a href="#">
-                    <img src="img/instagram.png" alt="">
+                    <i class="fa fa-instagram" ></i>
                 </a>
             </div>
-            <h5>Copyright © 2022. CC_Gen. All rights reserved.</h5>
+            <h5>Copyright © 2023. CC_Gen. All rights reserved.</h5>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
