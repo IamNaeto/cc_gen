@@ -461,6 +461,9 @@ margin-top: 15px
     .cardsamples{
         margin-bottom: 30px;
     }
+    .cardsamples img{
+        width: 200%;
+    }
 /* card collection styling */
 .card-collection{
     padding: 0 20px;

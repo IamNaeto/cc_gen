@@ -754,6 +754,9 @@ line-height: 30px;
     .cardsamples{
         margin: 100px 20px 0 20px;
     }
+    .cardsamples img{
+        width: 200%;
+    }
     /* billy section */
     .billy{
         flex-direction: column;
