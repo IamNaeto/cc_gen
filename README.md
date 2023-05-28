@@ -27,18 +27,47 @@ This is a team portfolio project in partial fulfilment of ALX Software Engineeri
 - Downloaded cc design should come with all files (hence, download should be a compressed format)
 - Allow user save data and come back to download
 
-## Documentation
+## Languages and Tools Used
 
-[Documentation](https://linktodocumentation)
+### UI Design
+- Figma
 
-[Design sketch](https://linktodocumentation)
+### Frontend 
+- HTML
+- CSS
+- JavaScript
 
-[Data Schemas](https://linktodocumentation)
+### Backend
+- JavaScript
+- API
+
+### DataBase
+- Mysql
+
+### Operating System
+- Windows
+- Ubuntu
+
+### IDE
+- Visual Studio Code
+
+### Deployment
+- Github Pages
+- Vercel
+- Netlify
+
+## Documentations
+
+[Project Proposal](https://docs.google.com/document/d/1MdETpjXAZDYXFHCX6k5NznJY5AI5fu4cDcI_JVYZLVk/edit?usp=sharing)
+
+[Project MVP Specification](https://docs.google.com/document/d/1MM5CyrXbOaykqE_vHk6A2CnZ0i01GYIfow9BpopuBbk/edit?usp=sharing)
+
+[Trello Board](https://trello.com/invite/b/qLRDcE6s/ATTIf78300db44661988e5557c7508bfb43d39CE3808/project-milestone)
 
 ## Website Link
 - Live Link :: [Go Live](https://iamnaeto.github.io/cc_gen/)
 
 ## Authors
 
-- [Nginika Jane](https://www.github.com/nginikajane)
+- [Nginika Jane](https://github.com/Nginika)
 - [Charles Obimnaeto Egesionu](https://www.github.com/IamNaeto)
