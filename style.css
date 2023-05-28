@@ -700,7 +700,7 @@ line-height: 30px;
     text-align: left;
     z-index: 2;
     display: block;
-    margin-top: 65px;
+    margin-top: 62px;
     padding: 20px 0;
   }
   #nav-links li {
@@ -831,34 +831,6 @@ line-height: 30px;
     text-align: justify;
     margin-bottom: 30px;
 }
-
-
- /* footer section styling */
- footer{
-    padding: 20px 0;
-    margin-top: 20px;
- }
- footer h3{
-font-size: 12px;
-line-height: 20px;
-padding: 0 20px;
- }
- footer .hero-nav li{
-    font-size: 12px;
- }
- .socials{
-     margin: 0 10px;
- }
- .socials .fa{
-    font-size: 20px;
- }
- .socials a:nth-child(2){
-    margin: 0 10px;
- }
- .socials .fa:hover{
-    transform: rotateX('40');
-    color: #FF5F00;
- }
 /* FAQ styling */
 .faq{
     margin: 40px 20px;
@@ -886,5 +858,31 @@ font-size: 8px;
 line-height: 16px;
 margin-top: 15px
  }
-
+ 
+ /* footer section styling */
+ footer{
+    padding: 20px 0;
+    margin-top: 20px;
+ }
+ footer h3{
+font-size: 12px;
+line-height: 20px;
+padding: 0 20px;
+ }
+ footer .hero-nav li{
+    font-size: 12px;
+ }
+ .socials{
+     margin: 0 10px;
+ }
+ .socials .fa{
+    font-size: 20px;
+ }
+ .socials a:nth-child(2){
+    margin: 0 10px;
+ }
+ .socials .fa:hover{
+    transform: rotateX('40');
+    color: #FF5F00;
+ }
  }
