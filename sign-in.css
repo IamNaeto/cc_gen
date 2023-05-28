@@ -89,6 +89,7 @@ form a{
 }
 form a:hover{
     color: #EB001B;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1330px) {
