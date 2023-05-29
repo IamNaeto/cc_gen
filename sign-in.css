@@ -74,6 +74,7 @@ button{
 .btn2:hover{
     border: 2px solid #FF5F00;
     color: #000000;
+    text-decoration: none;
 }
 .btn2 img{
     width: 25px;
