@@ -276,10 +276,9 @@ text-align: justify;
 .container-right h3{
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.25rem;
    color: #0F0F0F;
    width: 100%;
+   text-align: justify;
 }
  /* faq section styling */
  .faq{
@@ -344,10 +343,11 @@ cursor: pointer;
  }
  span{
     font-style: normal;
-font-weight: 400;
-font-size: 0.875rem;
-line-height: 1.5rem;
-display: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    display: none;
  }
 
  h4:hover span{
@@ -552,7 +552,7 @@ line-height: 30px;
 .container-right h3{
     font-size: 14px;
     line-height: 18px;
-   width: 100%;
+    width: 100%;
 }
 
 
@@ -831,7 +831,6 @@ line-height: 30px;
     text-align: center;
 }
 .container-right h3{
-    text-align: justify;
     margin-bottom: 30px;
 }
 /* FAQ styling */
