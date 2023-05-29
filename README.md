@@ -5,7 +5,7 @@
 ## Introduction
 
 A library of different credit card designs.
-This is a team portfolio project in partial fulfilment of ALX Software Engineering Program. The project has both authenticated and unathenticated users access/interact with different credit card designs as well as download, comment and share to different social media platforms
+This is a team portfolio project in partial fulfilment of ALX Software Engineering Program. This project has both authenticated and unathenticated users access/interact with different credit card designs as well as download, comment and share to different social media platforms
 
 ## Features
 
