@@ -180,8 +180,8 @@ width: 40%;
     width: 100%;
 }
 .billy-content{
-    width: 60%;
-    margin-left: 20px;
+    width: 50%;
+    margin-left: 10%;
 }
 .billy-content p {
     width: 100%;
@@ -198,7 +198,8 @@ width: 40%;
     margin: 50px 0;
 }
 .features-text{
-    width: 60%;
+    width: 50%;
+    margin-right: 5%;
 }
 .features ul li{
     font-style: normal;
@@ -209,7 +210,7 @@ color: #0F0F0F;
 text-align: justify;
 }
 .features-img{
-    width: 40%;
+    width: 45%;
     margin-left: 1.25rem;
 }
 .karim-img{
@@ -789,7 +790,7 @@ line-height: 30px;
         width: 100%;
     }
     .features-text ul{
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .features-img{
         width: 100%;
