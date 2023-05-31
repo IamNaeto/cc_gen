@@ -51,16 +51,18 @@
         </div>
 
         <div class="right">
-            <form action="">
+            <form action="customer.php" method="post">
                 <label for="fname">First Name</label>
                 <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required><br>
                 <label for="lname">Last Name</label>
                 <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required><br>
                 <label for="email">Email Address</label>
                 <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required><br>
+		<label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Your Username" required><br>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="pswd" placeholder="Enter Your Password" required><br>
-                <label for="cpassword">Comfirm Password</label>
+                <label for="cpassword">Confirm Password</label>
                 <input type="password" name="cpassword" id="cpswd" placeholder="Enter Your Password Again" required><br>
                 <button class="btn">Sign Up</button>             
                 <p>Already have an account? <a href="sign-in.html">Sign In.</a></p>
