@@ -47,6 +47,9 @@ input{
     padding: 5px 10px;
     outline: none;
 }
+input:valid{
+    border: 1px solid green;
+}
 button{
     height: 50px;
     cursor: pointer;
@@ -94,11 +97,6 @@ form a:hover{
     text-decoration: underline;
 }
 
-@media screen and (max-width: 1330px) {
-    main{
-        padding: 100px;
-    }
-}
 @media screen and (max-width: 1330px){
     main{
         padding: 100px 50px;
@@ -112,6 +110,12 @@ form a:hover{
     line-height: 20px;
     width: 450px;
 }
+}
+@media screen and (max-width: 897px) {
+    .right p{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width: 837px){
     main{
@@ -135,6 +139,8 @@ form a:hover{
 main{
     flex-direction: column;
     padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .left{
@@ -168,8 +174,5 @@ main{
 .right{
     width: 100%;
     margin-left: 0;
-}
-.right p{
-    width: 100%;
 }
 }
