@@ -205,6 +205,9 @@ margin-bottom: 50px;
     justify-content: center;
     width: 100%;
 }
+.cardbtn img:nth-child(1){
+    margin-left: 25px;
+}
 .cardbtn img{
     margin-right: 10px;
     margin-bottom: 30px;
@@ -319,6 +322,9 @@ margin-top: 15px
     p{
     font-size: 100%;
     line-height: 25px;
+    }
+    .cardbtn img:nth-child(1){
+        margin-left: 5px;
     }
  }
  @media  screen and (max-width: 864px){
@@ -476,24 +482,27 @@ margin-bottom: 50px;
 }
 .cardbtn img{
     margin-right: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     cursor: pointer;
     width: 10%;
 }
 .cardbtn span{
     margin-right: 2%;
-    margin-bottom: 18px;
+    margin-bottom: 9px;
     width: 100%;
     font-size: 50%;
 }
 .card .herobtn{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 90%;
     padding: 3px;
     height: 30px;
 }
 .card .herobtn a{
     font-size: 10px;
+}
+.hr{
+    margin-bottom: 10px;
 }
 
     
