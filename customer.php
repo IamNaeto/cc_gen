@@ -6,7 +6,7 @@
 	$password = $_POST['password'];
 
 	//Database connection
-	$conn = new mysqli('localhost','root','','CC_generator');
+	$conn = new mysqli('localhost','root','password','cc_gen');
 	if($conn->connect_error){
 		die('Connection Failed : '.$conn->connect_error);
 	}else{
@@ -16,6 +16,6 @@
 		echo "Registration Successful...";
 		$stmt->close();
 		$conn->close();
-		header("location: sign-in.html");
+		header("location: html/sign-in.html");
 	}
 ?>
