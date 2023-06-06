@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	$usename = $_POST['username'];
 	$pwd = $_POST['password'];
 	$unamecheck = "SELECT * FROM Customer WHERE username = '$usename'";
@@ -18,6 +20,9 @@
     			if (password_verify($pwd, $storedPassword)) {
         			// Password is correct
 				echo "Login successful!";
+				$_SESSION["username"] = $row['username'];
+				$_SESSION["firstname"] = $row['firstname'];
+				$_SESSION["surname"] = $row['surname'];
 				header("location: ../html/card-library.html");
     			} else {
         			// Password is incorrect
