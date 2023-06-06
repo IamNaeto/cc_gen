@@ -39,7 +39,7 @@ This is a team portfolio project in partial fulfilment of ALX Software Engineeri
 
 ### Backend
 - JavaScript
-- API
+- PHP
 
 ### DataBase
 - Mysql
