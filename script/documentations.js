@@ -15,6 +15,6 @@ rightColor.addEventListener('click', ()=>{
 	cardDesign.style.background = 'linear-gradient(134deg, #4C0964 7.86%, #EF8B16 97%)'
 })
 lastColor.addEventListener('click', ()=>{
-	cardDesign.style.background = 'linear-gradient(40deg, #EF8B16 8.63%, #26619F 98%'
+	cardDesign.style.background = 'linear-gradient(134deg, #EB001B 20.86%, #000000 97%)'
 })
 // documentations page script end

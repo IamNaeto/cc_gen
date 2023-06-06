@@ -33,19 +33,23 @@ function generateCreditCardNumber() {
       prefix = '4';
       length = 16;
       cardbrand.src = '../img/visa.png';
-      brandInfo.textContent = "";
+      brandInfo.textContent = "Visa Credit Card Generated Successfully!!!";
+      brandInfo.style.color = "#008000"
     } else if (brand === 'Verve') {
       prefix = '5061';
       length = 19;
       cardbrand.src = '../img/verve.png';
-      brandInfo.textContent = "";
+      brandInfo.textContent = "Verve Credit Card Generated Successfully!!!";
+      brandInfo.style.color = "#008000"
     } else if (brand === 'MasterCard') {
       prefix = '51'; // Mastercard prefix can be 51-55
       length = 16;
       cardbrand.src = '../img/mastercard.png';
-      brandInfo.textContent = "";
+      brandInfo.textContent = "MasterCard Credit Card Generated Successfully!!!";
+      brandInfo.style.color = "#008000"
     } else {
       brandInfo.textContent = 'Please select a valid card brand!!!';
+      brandInfo.style.color = "#d80202"
       cardbrand.src = '';
       cardNum.textContent = 'xxxx  xxxx  xxxx'
       expiryDate.textContent = ''
