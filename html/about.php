@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +15,27 @@
      <!-- Nav Section -->
      <nav>
         <div class="hero-logo">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img src="../img/Logo.png" alt="">
             </a>
         </div>
         <div class="hero-nav nav-links" id="nav-links">
             <div class="nav-left">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="card-library.html">Card Library</a></li>
-            <li><a href="documentations.html">Documentations</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="card-library.php">Card Library</a></li>
+            <li><a href="documentations.php">Documentations</a></li>
+            <li><a href="about.php">About</a></li>
             </div>
             <div class="nav-right">
-                <li class="signin"><a href="sign-in.html">Sign In</a></li>
-            <button class="herobtn1 navbtn"><a href="sign-up.html">Register</a></button>
-            </div>
+		     <?php if($_SESSION['username']) { ?>
+                <li class="signin" id="in-out"><a id="in-out-link" href="../php/logout.php">Sign Out</a></li>
+            <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="card-gen.html">Dashboard</a></button>
+
+                <?php } else { ?>
+                <li class="signin" id="in-out"><a id="in-out-link" href="sign-in.html">Sign In</a></li>
+            <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="sign-up.html">Register</a></button>
+                <?php } ?>
+	    </div>
         </div>
         <div class="menu-bar">
             <div class="hamburger-menu">
@@ -101,10 +108,10 @@
         <img src="../img/Logo.png" alt="">
         <h3>The cc_gen is an online digital library of credit card design which enable users to view, download and make use of credit cards samples as a resource in their own project.</h3>
         <div class="hero-nav">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="card-library.html">Card Library</a></li>
-            <li><a href="documentations.html">Documentations</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="card-library.php">Card Library</a></li>
+            <li><a href="documentations.php">Documentations</a></li>
+            <li><a href="about.php">About</a></li>
         </div>
         <div class="socials">
             <a href="#">

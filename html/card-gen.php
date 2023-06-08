@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,20 +16,20 @@
      <!-- Nav Section -->
      <nav>
         <div class="hero-logo">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img src="../img/Logo.png" alt="">
             </a>
         </div>
         <div class="hero-nav nav-links" id="nav-links">
             <div class="nav-left">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="card-library.html">Card Library</a></li>
-            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="card-library.php">Card Library</a></li>
+            <li><a href="documentations.php">Documentations</a></li>
             </div>
             <div class="nav-right">
                 <li class="signin"><a href="../php/logout.php">Sign Out</a></li>
             <button class="herobtn1 navbtn"><a href="">Dashboard</a></button>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.php">About</a></li>
             </div>
         </div>
         <div class="menu-bar">
@@ -41,7 +42,7 @@
 
     <!-- back section -->
  <header>
-    <a href="card-library.html"><i class="fa fa-long-arrow-left"></i> Back</a>
+    <a href="card-library.php"><i class="fa fa-long-arrow-left"></i> Back</a>
  </header>
 
 <!-- main section -->
@@ -51,7 +52,7 @@
             <div class="vector">
                 <img src="../img/Card Vector.png" alt="" class="vector">
             </div>
-            <h2 class="holder-name">Card Holder’s Name</h2>
+	    <h2 class="holder-name"> <?php echo $_SESSION['firstname'].' '.$_SESSION['surname']; ?></h2>
             <h3 class="card-num">xxxx  xxxx  xxxx  xxxx</h3>
             <img src="../img/Card Seal.png" alt="" class="seal">
             <div class="c-card">
@@ -86,10 +87,10 @@
         <img src="../img/Logo.png" alt="">
         <h3>The cc_gen is an online digital library of credit card design which enable users to view, download and make use of credit cards samples as a resource in their own project.</h3>
         <div class="hero-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="html/card-library.html">Card Library</a></li>
-            <li><a href="html/documentations.html">Documentations</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="html/card-library.php">Card Library</a></li>
+            <li><a href="html/documentations.php">Documentations</a></li>
+            <li><a href="about.php">About</a></li>
         </div>
         <div class="socials">
             <a href="#">

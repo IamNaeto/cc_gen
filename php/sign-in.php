@@ -23,7 +23,7 @@
 				$_SESSION["username"] = $row['username'];
 				$_SESSION["firstname"] = $row['firstname'];
 				$_SESSION["surname"] = $row['surname'];
-				header("location: ../html/card-library.html");
+				header("location: ../html/card-library.php");
     			} else {
         			// Password is incorrect
      	   			echo "Incorrect password!";

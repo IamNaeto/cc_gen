@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +17,27 @@
     <!-- Nav Section -->
     <nav>
         <div class="hero-logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="img/Logo.png" alt="">
             </a>
         </div>
         <div class="hero-nav nav-links" id="nav-links">
             <div class="nav-left">
-            <li><a href="php/index.php">Home</a></li>
-            <li><a href="html/card-library.html">Card Library</a></li>
-            <li><a href="html/documentations.html">Documentations</a></li>
-            <li><a href="html/about.html">About</a></li>
-            </div>
-            <div class="nav-right">
-                <li class="signin" id="in-out"><a id="in-out-link" href="html/sign-in.html">Sign In</a></li>
-            <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/sign-up.html">Register</a></button>
-            </div>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="html/card-library.php">Card Library</a></li>
+            <li><a href="html/documentations.php">Documentations</a></li>
+            <li><a href="html/about.php">About</a></li>
+	    </div>
+	    <div class="nav-right">
+		<?php if($_SESSION['username']) { ?>
+		<li class="signin" id="in-out"><a id="in-out-link" href="php/logout.php"><?php echo $_SESSION['firstname'];?></a></li>
+	    <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/card-gen.html">Dashboard</a></button>
+
+		<?php } else { ?>
+		<li class="signin" id="in-out"><a id="in-out-link" href="html/sign-in.html">Sign In</a></li>
+	    <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/sign-up.html">Register</a    ></button>
+		<?php } ?>    
+	</div>
         </div>
         <div class="menu-bar">
             <div class="hamburger-menu">
@@ -127,7 +136,7 @@
             <div class="hero-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="html/card-library.html">Card Library</a></li>
-                <li><a href="html/documentations.html">Documentations</a></li>
+                <li><a href="html/documentations.php">Documentations</a></li>
                 <li><a href="html/about.html">About</a></li>
             </div>
             <div class="socials">
