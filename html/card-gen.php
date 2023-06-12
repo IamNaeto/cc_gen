@@ -26,10 +26,10 @@
             <li><a href="card-library.php">Card Library</a></li>
             <li><a href="documentations.php">Documentations</a></li>
             </div>
+            <li><a href="about.php">About</a></li>
             <div class="nav-right">
                 <li class="signin"><a href="../php/logout.php">Sign Out</a></li>
             <button class="herobtn1 navbtn"><a href="">Dashboard</a></button>
-            <li><a href="about.php">About</a></li>
             </div>
         </div>
         <div class="menu-bar">
@@ -48,7 +48,7 @@
 <!-- main section -->
  <main>
     <div class="card-doc">
-        <div class="card-design">
+        <div class="card-design front" id="cardFront">
             <div class="vector">
                 <img src="../img/Card Vector.png" alt="" class="vector">
             </div>
@@ -60,13 +60,35 @@
             </div>
         </div>
 
-        <p>Business credit card</p>
+        <p>Credit Card Front View</p>
+
         <div class="card-color">
             <div class="left-color"></div>
             <div class="mid-color"></div>
             <div class="right-color"></div>
             <div class="last-color"></div>
         </div>
+
+        <div class="card-design back" id="back">
+            <div class="black"></div>
+
+            <div class="cvlines">
+                <div class="lines">
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                    <hr>
+                </div> <h3 class="cv">xxx</h3>
+            </div>
+            <p>This card is issued by and remains the property of Credit Cafe. If found please contact one of the developer through the contacts at the about page of this website</p>
+        </div>
+        <p>Credit Card Back View</p>
     </div>
     <div class="card-doc-about">
         <h2>Ready To Create & Test  Beautifully Designed Credit Cards?</h2>
