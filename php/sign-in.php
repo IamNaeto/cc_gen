@@ -1,4 +1,5 @@
 <?php
+	//Verify a user sign in details
 	session_start();
 
 	$usename = $_POST['username'];
@@ -26,13 +27,24 @@
 				header("location: ../html/card-library.php");
     			} else {
         			// Password is incorrect
-     	   			echo "Incorrect password!";
-				//header("location: ../html/sign-in.html");
+				echo '<script>
+					if (confirm("Incorrect password!")) {
+						window.location.href="../html/sign-in.html";
+					} else {
+						window.location.href="../html/sign-in.html";
+					}
+					</script>';
     			}
 		} else {
     			// Username does not exist
-			echo "Username not found!";
-			//header("location: ../html/sign-in.html");
+			echo '<script>
+				
+					if (confirm("Username not found!")) {
+						window.location.href="../html/sign-in.html";
+                                        } else {
+                                                window.location.href="../html/sign-in.html";
+                                        }				
+				</script>';
 		}	
 		// Close the database connection
 		mysqli_close($conn);

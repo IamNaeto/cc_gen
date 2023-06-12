@@ -1,4 +1,5 @@
 <?php
+	//unsets session variales and ends session
 	session_start();
 	unset($_SESSION["username"]);
 	unset($_SESSION["firstname"]);

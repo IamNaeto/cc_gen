@@ -74,7 +74,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -88,7 +88,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -102,7 +102,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -133,7 +133,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -147,7 +147,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
             </div>
 
@@ -164,7 +164,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -178,7 +178,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
 
                 <div class="card">
@@ -192,7 +192,7 @@
                         <img src="../img/Comment.png" alt=""><span>25</span>
                         <img src="../img/Eye Open.png" alt=""><span class="last-span">200</span>
                     </div>
-                    <button class="herobtn"><a href="documentations.html">View Card</a></button>
+                    <button class="herobtn"><a href="documentations.php">View Card</a></button>
                 </div>
             </div>
 

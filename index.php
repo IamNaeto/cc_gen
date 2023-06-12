@@ -1,4 +1,5 @@
 <?php
+	# php session recorded
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -29,8 +30,9 @@
             <li><a href="html/about.php">About</a></li>
 	    </div>
 	    <div class="nav-right">
-		<?php if($_SESSION['username']) { ?>
-		<li class="signin" id="in-out"><a id="in-out-link" href="php/logout.php"><?php echo $_SESSION['firstname'];?></a></li>
+		<!-- checks if a user is logged in and chooses what to display on the navbar -->
+		<?php if($_SESSION['firstname']) { ?>
+		<li class="signin" id="in-out"><a id="in-out-link" href="php/logout.php">Sign Out</a></li>
 	    <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/card-gen.html">Dashboard</a></button>
 
 		<?php } else { ?>
