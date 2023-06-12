@@ -65,7 +65,7 @@ This is a team portfolio project in partial fulfilment of ALX Software Engineeri
 [Trello Board](https://trello.com/invite/b/qLRDcE6s/ATTIf78300db44661988e5557c7508bfb43d39CE3808/project-milestone)
 
 ## Website Link
-- Live Link :: [Go Live](https://iamnaeto.github.io/cc_gen/)
+- Live Link :: [Go Live](http://ccgen.nginikajane.tech/)
 
 ## Authors
 
