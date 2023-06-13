@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate Card</title>
     <link rel="icon" href="../img/Logo.png">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/documentations.css">
     <link rel="stylesheet" href="../css/card-gen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -89,7 +88,7 @@
                     <hr>
                 </div> <h3 class="cv">xxx</h3>
             </div>
-            <p>This card is issued by and remains the property of Credit Cafe. If found please contact one of the developer through the contacts at the about page of this website</p>
+            <p>This card is issued by and remains the property of Credit Cafe. This card may be used only by the named cardholder and in accordance with the Credit Cafe Terms and Conditions of Use</p>
         </div>
         <p>Credit Card Back View</p>
     </div>

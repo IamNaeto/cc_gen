@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* border: 2px solid red; */
 }
 
 /* nav section styling */
@@ -444,13 +443,13 @@ line-height: 1.5625rem;
 .billy-content{
     width: 65%;
 }
-.features{
-    padding: 50px;
-}
 /* features section styling */
 .features ul li{
 font-size: 18px;
 line-height: 30px;
+}
+.features{
+    padding: 50px;
 }
 /* Others Think Section Styling */
 .others-think{

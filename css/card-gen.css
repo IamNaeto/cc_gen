@@ -16,6 +16,7 @@ select{
     color: #d80202;
     padding-bottom: 30px;
     height: 20px;
+    margin-bottom: 0;
 }
 .c-card{
     display: flex;
@@ -126,6 +127,7 @@ select{
     .back p{
         padding: 0;
         font-size: 14px;
+        margin: 20px;
     }
     .card-design .black{
         height: 30px;

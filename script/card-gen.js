@@ -6,6 +6,9 @@ const brandInfo = document.querySelector('.brandInfo')
 const expiryDate = document.querySelector('.expire')
 const cardCVV = document.querySelector('.cv')
 
+// A boolean variable to track card generation status
+let isCardGenerated = false;
+
 // Below is a function that make the card brands accessable
 function brandType() {
   const brandType = ["Visa", "MasterCard", "Verve"];
@@ -31,7 +34,6 @@ function generateCreditCardCVV() {
   }
   return cvv;
 }
-
 
 // Add event listener to the select element for change event
 generateBtn.addEventListener('click', (event)=>{
@@ -75,8 +77,8 @@ function generateCreditCardNumber() {
       cardNum.textContent = 'xxxx  xxxx  xxxx'
       cardCVV.innerHTML = 'xxx'
       expiryDate.textContent = ''
+      isCardGenerated = false;
       return null;
-      
     }
   
     let cardNumber = prefix;
@@ -120,19 +122,20 @@ function generateCreditCardNumber() {
     let month = date.getMonth()+1
     let expire = `Valid Till : ${month}/${year}`
     expiryDate.textContent = expire
+
+    isCardGenerated = true;
   }
 
     generateCreditCardNumber()  
 });
 
-
 // Download Card
-
 const downloadButton = document.getElementById('download');
 
 downloadButton.addEventListener('click', (event) => {
   event.preventDefault();
-
+  // Check if the credit card have been generated first
+  if (isCardGenerated) {
   function downloadDivAsImage() {
     const cardToDownload = document.getElementById('cardFront');
 
@@ -148,8 +151,28 @@ downloadButton.addEventListener('click', (event) => {
       link.click();
     });
   }
+  function downloadDivAsImage2() {
+    const backCardToDownload = document.getElementById('back');
 
+    // Convert the div element to a canvas
+    html2canvas(backCardToDownload, { useCORS: true }).then(function (canvas) {
+      // Convert the canvas to a data URL
+      const dataURL = canvas.toDataURL('image/png');
+
+      // Create a temporary link and trigger the download
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'card.png';
+      link.click();
+    });
+  }
   downloadDivAsImage();
+  downloadDivAsImage2();
+}
+  else {
+    // Card not generated, display an error message
+    brandInfo.textContent = 'Please gererate credit card first to enable download';
+  }
 });
 
 
