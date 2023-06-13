@@ -130,42 +130,27 @@ function generateCreditCardNumber() {
 
 const downloadButton = document.getElementById('download');
 
-downloadButton.addEventListener('click', (event)=>{
-  event.preventDefault()
-    function downloadDivAsImage() {
-      const cardToDownload = document.getElementById('cardFront');
-    
-      // Create a new canvas element
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
-      const cardStyles = window.getComputedStyle(cardToDownload);
-    
-      // Set the canvas size based on the card dimensions
-      const width = parseInt(cardStyles.width);
-      const height = parseInt(cardStyles.height);
-      canvas.width = width;
-      canvas.height = height;
-    
-      // Create an image element and set its source to the div background image
-      const image = new Image();
-      image.onload = function() {
-        // Draw the image onto the canvas
-        context.drawImage(image, 0, 0, width, height);
-    
-        // Convert the canvas to a data URL
-        const dataURL = canvas.toDataURL('image/png');
-    
-        // Create a temporary link and trigger the download
-        const link = document.createElement('a');
-        link.href = dataURL;
-        link.download = 'card.png';
-        link.click();
-      };
-      
-      // Set the source of the image element to the background image of the div
-      const backgroundImage = cardStyles.backgroundImage;
-      const imageUrl = backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
-      image.src = imageUrl;
-    }
-  downloadDivAsImage()
-})
+downloadButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  function downloadDivAsImage() {
+    const cardToDownload = document.getElementById('cardFront');
+
+    // Convert the div element to a canvas
+    html2canvas(cardToDownload, { useCORS: true }).then(function (canvas) {
+      // Convert the canvas to a data URL
+      const dataURL = canvas.toDataURL('image/png');
+
+      // Create a temporary link and trigger the download
+      const link = document.createElement('a');
+      link.href = dataURL;
+      link.download = 'card.png';
+      link.click();
+    });
+  }
+
+  downloadDivAsImage();
+});
+
+
+

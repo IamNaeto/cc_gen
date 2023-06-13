@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../css/documentations.css">
     <link rel="stylesheet" href="../css/card-gen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 </head>
 <body>
      <!-- Nav Section -->
@@ -25,8 +28,8 @@
             <li><a href="../index.php">Home</a></li>
             <li><a href="card-library.php">Card Library</a></li>
             <li><a href="documentations.php">Documentations</a></li>
-            </div>
             <li><a href="about.php">About</a></li>
+            </div>
             <div class="nav-right">
                 <li class="signin"><a href="../php/logout.php">Sign Out</a></li>
             <button class="herobtn1 navbtn"><a href="">Dashboard</a></button>
