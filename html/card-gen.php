@@ -71,7 +71,7 @@
             <div class="last-color"></div>
         </div>
 
-        <div class="card-design back" id="back">
+        <div class="card-design back" id="cardBack">
             <div class="black"></div>
 
             <div class="cvlines">

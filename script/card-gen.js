@@ -129,51 +129,38 @@ function generateCreditCardNumber() {
     generateCreditCardNumber()  
 });
 
-// Download Card
+
+// download generated cards script
 const downloadButton = document.getElementById('download');
 
 downloadButton.addEventListener('click', (event) => {
   event.preventDefault();
-  // Check if the credit card have been generated first
+  // Check if the credit card has been generated first
   if (isCardGenerated) {
-  function downloadDivAsImage() {
+    function downloadDivAsImage(cardElement, fileName) {
+      // Convert the div element to a canvas
+      html2canvas(cardElement, { useCORS: true }).then(function (canvas) {
+        // Convert the canvas to a data URL
+        const dataURL = canvas.toDataURL('image/png');
+
+        // Create a temporary link and trigger the download
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.download = fileName;
+        link.click();
+      });
+    }
+
     const cardToDownload = document.getElementById('cardFront');
+    const backCardToDownload = document.getElementById('cardBack');
 
-    // Convert the div element to a canvas
-    html2canvas(cardToDownload, { useCORS: true }).then(function (canvas) {
-      // Convert the canvas to a data URL
-      const dataURL = canvas.toDataURL('image/png');
-
-      // Create a temporary link and trigger the download
-      const link = document.createElement('a');
-      link.href = dataURL;
-      link.download = 'card.png';
-      link.click();
-    });
-  }
-  function downloadDivAsImage2() {
-    const backCardToDownload = document.getElementById('back');
-
-    // Convert the div element to a canvas
-    html2canvas(backCardToDownload, { useCORS: true }).then(function (canvas) {
-      // Convert the canvas to a data URL
-      const dataURL = canvas.toDataURL('image/png');
-
-      // Create a temporary link and trigger the download
-      const link = document.createElement('a');
-      link.href = dataURL;
-      link.download = 'card.png';
-      link.click();
-    });
-  }
-  downloadDivAsImage();
-  downloadDivAsImage2();
-}
-  else {
+    // Download both cards sequentially
+    downloadDivAsImage(cardToDownload, 'cardFront.png');
+    downloadDivAsImage(backCardToDownload, 'cardBack.png');
+  } else {
     // Card not generated, display an error message
-    brandInfo.textContent = 'Please gererate credit card first to enable download';
+    brandInfo.textContent = 'Please generate a credit card first to enable download.';
   }
 });
-
 
 
