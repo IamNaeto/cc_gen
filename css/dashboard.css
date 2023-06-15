@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
     /* border: 2px solid red; */
 }
-
+/* Major container styling */
 .dash-container{
     display: flex;
     align-items: center;
@@ -73,6 +73,9 @@
     height: 100vh;
     padding: 10px 50px;
 }
+/* .dashboard-container{
+    display: none;
+} */
 .dash-head{
     display: flex;
     align-items: center;
@@ -121,7 +124,7 @@
     cursor: pointer;
 }
 
-/* User section info */
+/* User info section */
 .dashboard .users-info{
     display: flex;
     align-items: center;
@@ -154,6 +157,7 @@
 .info .fa{
     font-size: 50px;
     margin-right: 10px;
+    color: #F3691B;
 }
 
 /* actions sec styling */
