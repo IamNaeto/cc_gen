@@ -8,6 +8,7 @@ const cardCVV = document.querySelector('.cv')
 let cardvv = 0;
 let expiry = '';
 let cno = '';
+let cardtype = select.value
 
 // A boolean variable to track card generation status
 let isCardGenerated = false;
@@ -161,6 +162,16 @@ downloadButton.addEventListener('click', (event) => {
     // Download both cards sequentially
     downloadDivAsImage(cardToDownload, 'cardFront.png');
     downloadDivAsImage(backCardToDownload, 'cardBack.png');
+
+  const ctype = document.querySelector('#ctype').value
+  const cnumber = document.querySelector('#cnumber').value
+  const cardvv = document.querySelector('#cardvv').value
+  const expDate = document.querySelector('#expDate').value
+    ctype.innerHTML = cardtype
+    cardvv.innerHTML = cardvv
+    cnumber.innerHTML = cno
+    expDate.innerHTML = expiry
+    
   } else {
     // Card not generated, display an error message
     brandInfo.textContent = 'Please generate a credit card first to enable download.';
