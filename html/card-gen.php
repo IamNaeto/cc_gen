@@ -106,11 +106,9 @@
        </div>
     </div>
 
-    <form>
-  	<input type="hidden" id="ctype" name="ctype"></input>
-  	<input type="hidden" id="cnumber" name="cnumber"></input>
-	<input type="hidden" id="cardvv" name="cardvv"></input>
-  	<input type="hidden" id="expDate" name="expDate"></input>
+    <form id="myForm" action="" method=" ">
+        <!-- Your form content goes here -->
+        <input type="hidden" id="submitbtn">
     </form>
  </main>
     

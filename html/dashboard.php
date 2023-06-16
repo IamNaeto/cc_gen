@@ -78,7 +78,7 @@
             <!-- downloaded cards sec -->
             <div class="downloads-details">
                 <h1>Downloaded Cards</h1>
-   		<table class="table table-bordered">
+   		        <table class="table table-bordered">
                         <thead>
                                 <th>S/N</th>
                                 <th>Card Type</th>
@@ -92,7 +92,7 @@
                                         $sn=1;
                                         foreach($fetchData as $data){
                         ?>
-			 <tr>
+			            <tr>
                                 <td><?php echo $sn; ?></td>
                                 <td><?php echo $data['fullName']??''; ?></td>
                                 <td><?php echo $data['gender']??''; ?></td>
@@ -109,9 +109,9 @@
                         <?php
                         }?>
                    </tbody>
-                   </table>
+                </table>
 
-                <!--end of table inserted -->
+            </div>    <!--end of table inserted -->
 
         </div>
 
@@ -174,7 +174,7 @@
     </div>
 
     <footer>
-        <p>Copyright © 2022. CC_Gen. All rights reserved.</p>
+        <p>Copyright © 2023. CC_Gen. All rights reserved.</p>
 
         <div class="socials">
             <a href="#">

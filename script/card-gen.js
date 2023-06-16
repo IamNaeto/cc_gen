@@ -163,15 +163,38 @@ downloadButton.addEventListener('click', (event) => {
     downloadDivAsImage(cardToDownload, 'cardFront.png');
     downloadDivAsImage(backCardToDownload, 'cardBack.png');
 
-  const ctype = document.querySelector('#ctype').value
-  const cnumber = document.querySelector('#cnumber').value
-  const cardvv = document.querySelector('#cardvv').value
-  const expDate = document.querySelector('#expDate').value
-    ctype.innerHTML = cardtype
-    cardvv.innerHTML = cardvv
-    cnumber.innerHTML = cno
-    expDate.innerHTML = expiry
-    
+    // Submit the form
+        const form = document.querySelector('form');
+
+    // Set the form inputs with the values
+    const ctypeInput = document.createElement('input');
+    ctypeInput.type = 'hidden';
+    ctypeInput.name = 'ctype';
+    ctypeInput.value = cardtype;
+    form.appendChild(ctypeInput);
+
+    const cnumberInput = document.createElement('input');
+    cnumberInput.type = 'hidden';
+    cnumberInput.name = 'cnumber';
+    cnumberInput.value = cno;
+    form.appendChild(cnumberInput);
+
+    const cardvvInput = document.createElement('input');
+    cardvvInput.type = 'hidden';
+    cardvvInput.name = 'cardvv';
+    cardvvInput.value = cardvv;
+    form.appendChild(cardvvInput);
+
+    const expDateInput = document.createElement('input');
+    expDateInput.type = 'hidden';
+    expDateInput.name = 'expDate';
+    expDateInput.value = expiry;
+    form.appendChild(expDateInput);
+
+    console.log(form)
+    // Submit the form
+    form.submit();
+
   } else {
     // Card not generated, display an error message
     brandInfo.textContent = 'Please generate a credit card first to enable download.';

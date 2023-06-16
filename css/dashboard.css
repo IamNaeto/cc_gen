@@ -183,17 +183,12 @@
     border-radius: 10px;
     margin: 20px 0;
 }
-.downloads-details
-.details{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.downloads-details table{
+    width: 100%;
+    margin: 20px 0;
 }
-.details h3{
-    margin-bottom: 10px;
-}
-.details p{
-    margin-bottom: 10px;
+.downloads-details table, th, tr{
+    padding: 5px;
 }
 
 /* Footer sec styling */
