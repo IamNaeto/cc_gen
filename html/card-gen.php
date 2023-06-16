@@ -105,6 +105,13 @@
         <a href="" class="herobtn" id="download">Download</a>
        </div>
     </div>
+
+    <form>
+  	<input type="hidden" id="ctype" name="ctype"></input>
+  	<input type="hidden" id="cnumber" name="cnumber"></input>
+	<input type="hidden" id="cardvv" name="cardvv"></input>
+  	<input type="hidden" id="expDate" name="expDate"></input>
+    </form>
  </main>
     
     <!-- footer section -->
