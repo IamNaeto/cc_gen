@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,15 +28,15 @@
     
                     <div class="dashhead-user">
                     <i class="fa fa-user-circle"></i>
-                    <p>User</p>
+		    <p><?php echo $_SESSION['firstname']; ?></p>
                     <div class="user-prop">
                         <i class="fa fa-chevron-circle-down" id="user-icon"></i>
                     <div class="user-links">
-                        <a href="">Home</a>
-                        <a href="">Card Library</a>
-                        <a href="">Documentations</a>
-                        <a href="">About</a>
-                        <a href="">Sign Out</a>
+                        <a href="../index.php">Home</a>
+                        <a href="card-library.php">Card Library</a>
+                        <a href="documentations.php">Documentations</a>
+                        <a href="about.php">About</a>
+                        <a href="../php/logout.php">Sign Out</a>
                     </div>
                     </div>
                     </div>
@@ -46,7 +47,7 @@
                     <div class="info">
                         <i class="fa fa-user-circle"></i>
                         <div>
-                            <h2>Hello User</h2>
+				<h2>Hello <?php echo $_SESSION['firstname'].' '.$_SESSION['surname']; ?></h2>
                             <p>Welcome Back</p>
                         </div>
                     </div>
@@ -77,37 +78,41 @@
             <!-- downloaded cards sec -->
             <div class="downloads-details">
                 <h1>Downloaded Cards</h1>
-    
-                <div class="details">
-                    <div class="cardname">
-                        <h3>Card Name</h3>
-                        <p>Visa</p>
-                        <p>Visa</p>
-                        <p>Visa</p>
-                        <p>Visa</p>
-                        <p>Visa</p>
-                        <p>Visa</p>
-                    </div>
-                    <div class="cardnum">
-                        <h3>Card Number</h3>
-                        <p>2034   2132   3453   2134</p>
-                        <p>2034   2132   3453   2134</p>
-                        <p>2034   2132   3453   2134</p>
-                        <p>2034   2132   3453   2134</p>
-                        <p>2034   2132   3453   2134</p>
-                        <p>2034   2132   3453   2134</p>
-                    </div>
-                    <div class="download-date">
-                        <h3>Date Downloaded</h3>
-                        <p>15/06/2023</p>
-                        <p>15/06/2023</p>
-                        <p>15/06/2023</p>
-                        <p>15/06/2023</p>
-                        <p>15/06/2023</p>
-                        <p>15/06/2023</p>
-                    </div>
-                </div>
-            </div>
+   		<table class="table table-bordered">
+                        <thead>
+                                <th>S/N</th>
+                                <th>Card Type</th>
+                                <th>Card Number</th>
+                                <th>CVV</th>
+                                <th>Expiry Date</th>
+                        </thead>
+                    <tbody>
+                        <?php
+                                if(is_array($fetchData)){
+                                        $sn=1;
+                                        foreach($fetchData as $data){
+                        ?>
+			 <tr>
+                                <td><?php echo $sn; ?></td>
+                                <td><?php echo $data['fullName']??''; ?></td>
+                                <td><?php echo $data['gender']??''; ?></td>
+                                <td><?php echo $data['email']??''; ?></td>
+                                <td><?php echo $data['mobile']??''; ?></td>
+                        </tr>
+                        <?php
+                                $sn++;  }} else { ?>
+                        <tr>
+                                <td colspan="8">
+                                <?php echo $fetchData; ?>
+                                </td>
+                        <tr>
+                        <?php
+                        }?>
+                   </tbody>
+                   </table>
+
+                <!--end of table inserted -->
+
         </div>
 
         <!-- Profile Section -->

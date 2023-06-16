@@ -33,7 +33,7 @@
 		<!-- checks if a user is logged in and chooses what to display on the navbar -->
 		<?php if($_SESSION['firstname']) { ?>
 		<li class="signin" id="in-out"><a id="in-out-link" href="php/logout.php">Sign Out</a></li>
-	    <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/card-gen.html">Dashboard</a></button>
+	    <button class="herobtn1 navbtn" id="reg-dash"><a id="reg-dash-link" href="html/dashboard.php">Dashboard</a></button>
 
 		<?php } else { ?>
 		<li class="signin" id="in-out"><a id="in-out-link" href="html/sign-in.html">Sign In</a></li>

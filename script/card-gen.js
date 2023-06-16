@@ -5,6 +5,9 @@ const select = document.querySelector('select');
 const brandInfo = document.querySelector('.brandInfo')
 const expiryDate = document.querySelector('.expire')
 const cardCVV = document.querySelector('.cv')
+let cardvv = 0;
+let expiry = '';
+let cno = '';
 
 // A boolean variable to track card generation status
 let isCardGenerated = false;
@@ -45,7 +48,7 @@ function generateCreditCardNumber() {
 
   // re-assign the ccv to another variable
     let generatedCVV = generateCreditCardCVV();
-
+	cardvv = generatedCVV;
     // Determine the prefix and length based on the card type
     let brand = select.value;
   
@@ -113,6 +116,7 @@ function generateCreditCardNumber() {
   
     const checksumDigit = (Math.ceil(sum / 10) * 10 - sum) % 10;
     cardNumber += checksumDigit;
+    cno = cardNumber;
   
     cardNum.innerHTML = cardNumber;
 
@@ -120,7 +124,8 @@ function generateCreditCardNumber() {
     const date = new Date()
     let year = date.getFullYear()+3
     let month = date.getMonth()+1
-    let expire = `Valid Till : ${month}/${year}`
+    expiry = `${month}/${year}`
+    let expire = `Valid Till : ${expiry}`
     expiryDate.textContent = expire
 
     isCardGenerated = true;
@@ -128,7 +133,6 @@ function generateCreditCardNumber() {
 
     generateCreditCardNumber()  
 });
-
 
 // download generated cards script
 const downloadButton = document.getElementById('download');

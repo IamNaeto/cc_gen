@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 </head>
 <body>
@@ -31,7 +32,7 @@
             </div>
             <div class="nav-right">
                 <li class="signin"><a href="../php/logout.php">Sign Out</a></li>
-            <button class="herobtn1 navbtn"><a href="">Dashboard</a></button>
+            <button class="herobtn1 navbtn"><a href="dashboard.php">Dashboard</a></button>
             </div>
         </div>
         <div class="menu-bar">

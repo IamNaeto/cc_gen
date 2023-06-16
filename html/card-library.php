@@ -28,7 +28,7 @@
             <div class="nav-right">
 		<?php if($_SESSION['username']) { ?>
 		<li class="signin"><a href="../php/logout.php">Sign Out</a></li>
-            <button class="herobtn1 navbtn"><a href="../index.php">Dashboard</a></button>
+            <button class="herobtn1 navbtn"><a href="dashboard.php">Dashboard</a></button>
 		<?php } else { ?>
 		 <li class="signin"><a href="sign-in.html">Sign In</a></li>
             <button class="herobtn1 navbtn"><a href="sign-up.html">Register</a></button>
