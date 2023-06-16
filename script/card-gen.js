@@ -140,6 +140,7 @@ const downloadButton = document.getElementById('download');
 
 downloadButton.addEventListener('click', (event) => {
   event.preventDefault();
+
   // Check if the credit card has been generated first
   if (isCardGenerated) {
     function downloadDivAsImage(cardElement, fileName) {
@@ -163,37 +164,20 @@ downloadButton.addEventListener('click', (event) => {
     downloadDivAsImage(cardToDownload, 'cardFront.png');
     downloadDivAsImage(backCardToDownload, 'cardBack.png');
 
-    // Submit the form
-        const form = document.querySelector('form');
+    // Prepare the form data
+    const formData = new FormData();
+    formData.append('ctype', cardtype);
+    formData.append('cnumber', cno);
+    formData.append('cardvv', cardvv);
+    formData.append('expDate', expiry);
 
-    // Set the form inputs with the values
-    const ctypeInput = document.createElement('input');
-    ctypeInput.type = 'hidden';
-    ctypeInput.name = 'ctype';
-    ctypeInput.value = cardtype;
-    form.appendChild(ctypeInput);
-
-    const cnumberInput = document.createElement('input');
-    cnumberInput.type = 'hidden';
-    cnumberInput.name = 'cnumber';
-    cnumberInput.value = cno;
-    form.appendChild(cnumberInput);
-
-    const cardvvInput = document.createElement('input');
-    cardvvInput.type = 'hidden';
-    cardvvInput.name = 'cardvv';
-    cardvvInput.value = cardvv;
-    form.appendChild(cardvvInput);
-
-    const expDateInput = document.createElement('input');
-    expDateInput.type = 'hidden';
-    expDateInput.name = 'expDate';
-    expDateInput.value = expiry;
-    form.appendChild(expDateInput);
-
-    console.log(form)
-    // Submit the form
-    form.submit();
+    // Send the form data using AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'your-server-url', true);
+    xhr.onload = function () {
+      // Handle the response from the server if needed
+    };
+    xhr.send(formData);
 
   } else {
     // Card not generated, display an error message
