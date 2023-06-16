@@ -73,9 +73,6 @@
     height: 100vh;
     padding: 10px 50px;
 }
-/* .dashboard-container{
-    display: none;
-} */
 .dash-head{
     display: flex;
     align-items: center;
@@ -216,7 +213,92 @@ footer a .fa{
     font-size: 20px;
     color: #FFFFFF;
     margin-right: 10px;
+    transition: 0.5s;
 }
 footer a .fa:hover{
     color: #F3691B;
+}
+.foot-links a{
+    font-size: 14px;
+    margin: 0 3px;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+.foot-links a:hover{
+    color: #F3691B;
+    text-decoration: underline;
+}
+/* Profile section styling */
+.profile-container{
+    display: none;
+}
+.profile-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.profile-photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    height: 500px;
+    width: 38%;
+}
+.profile-photo .fa{
+    font-size: 100px;
+    color: #F3691B;
+    margin-bottom: 20px;
+}
+.profile-photo h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+.profile-details{
+    width: 60%;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 30px 0;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+form div{
+    width: 50%;
+}
+form .left{
+    margin-right: 20px;
+}
+form input{
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+}
+.btn{
+    background: linear-gradient(134deg, #EB001B -43.28%, #F79E1B 97%);
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 10px 10px;
+    cursor: pointer;
+    border: 2px solid #F79E1B;
 }
