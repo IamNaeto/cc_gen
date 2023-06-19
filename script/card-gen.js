@@ -8,7 +8,7 @@ const cardCVV = document.querySelector('.cv')
 let cardvv = 0;
 let expiry = '';
 let cno = '';
-let cardtype = select.value
+let cardtype = '';
 
 // A boolean variable to track card generation status
 let isCardGenerated = false;
@@ -52,6 +52,7 @@ function generateCreditCardNumber() {
 	cardvv = generatedCVV;
     // Determine the prefix and length based on the card type
     let brand = select.value;
+	cardtype = brand;
   
     if (brand === 'Visa') {
       prefix = '4';
@@ -173,7 +174,7 @@ downloadButton.addEventListener('click', (event) => {
 
     // Send the form data using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'your-server-url', true);
+    xhr.open('POST', '/php/card-detail.php', true);
     xhr.onload = function () {
       // Handle the response from the server if needed
     };

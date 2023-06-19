@@ -86,46 +86,27 @@
                     <h1>Downloaded Cards</h1>
                     <table class="table table-bordered">
                         <thead>
-                            <th>S/N</th>
-                            <th>Card Type</th>
-                            <th>Card Number</th>
-                            <th>CVV</th>
-                            <th>Expiry Date</th>
+                                <th>S/N</th>
+                                <th>Card Type</th>
+                                <th>Card Number</th>
+                                <th>CVV</th>
+                                <th>Expiry Date</th>
                         </thead>
-                        <tbody>
-                            <?php
+                    <tbody>
+                        <?php
                                 if(is_array($fetchData)){
                                         $sn=1;
                                         foreach($fetchData as $data){
                         ?>
-                            <tr>
-                                <td>
-                                    <?php echo $sn; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['fullName']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['gender']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['email']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['mobile']??''; ?>
-                                </td>
-                            </tr>
-                            <?php
-                                $sn++;  }} else { ?>
-                            <tr>
-                                <td colspan="8">
-                                    <?php echo $fetchData; ?>
-                                </td>
-                            <tr>
-                                <?php
-                        }?>
-                        </tbody>
-                    </table>
+			        <tr>
+					<td><?php echo $row['card_type']; ?></td>
+					<td><?php echo $row['card_number']; ?></td>
+					<td><?php echo $row['cvv']; ?></td>
+					<td><?php echo $row['expiry_date']; ?></td>
+                        	</tr>
+                        <?php } ?>
+                   </tbody>
+                </table>
 
                 </div> <!--end of table inserted -->
             </div>
