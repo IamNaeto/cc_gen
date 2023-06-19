@@ -1,20 +1,69 @@
 // Side bar navigations
 const dashboard = document.querySelector('.dashboard-container')
 const profile = document.querySelector('.profile-container')
+const downloadedCards = document.querySelector('.download-wrapper')
+const savedCards = document.querySelector('.saved-wrapper')
 
 const dashboardNav = document.querySelector('#dashboardNav')
 dashboardNav.addEventListener('click', () => {
     dashboard.style.display = 'block'
+    dashboardNav.style.backgroundColor = '#F3691B'
+    dashboardNav.style.color = '#FFFFFF'
     profile.style.display = 'none'
+    profileNav.style.backgroundColor = '#FFFFFF'
+    profileNav.style.color = '#000000'
+    downloadedCards.style.display = 'none'
+    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
+    downloadedCardsNav.style.color = '#000000'
 })
 
 const profileNav = document.querySelector('#profileNav')
 profileNav.addEventListener('click', () => {
     dashboard.style.display = 'none'
+    dashboardNav.style.backgroundColor = '#FFFFFF'
+    dashboardNav.style.color = '#000000'
+    downloadedCards.style.display = 'none'
+    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
+    downloadedCardsNav.style.color = '#000000'
+    savedCards.style.display = 'none'
+    savedNav.style.backgroundColor = '#FFFFFF'
+    savedNav.style.color = '#000000'
     profile.style.display = 'block'
+    profileNav.style.backgroundColor = '#F3691B'
+    profileNav.style.color = '#FFFFFF'
 })
 
+const downloadedCardsNav = document.querySelector("#downloadNav")
+downloadedCardsNav.addEventListener('click', () => {
+    dashboard.style.display = 'none'
+    dashboardNav.style.backgroundColor = '#FFFFFF'
+    dashboardNav.style.color = '#000000'
+    profile.style.display = 'none'
+    profileNav.style.backgroundColor = '#FFFFFF'
+    profileNav.style.color = '#000000'
+    savedCards.style.display = 'none'
+    savedNav.style.backgroundColor = '#FFFFFF'
+    savedNav.style.color = '#000000'
+    downloadedCards.style.display = 'block'
+    downloadedCardsNav.style.backgroundColor = '#F3691B'
+    downloadedCardsNav.style.color = '#FFFFFF'
+})
 
+const savedNav = document.querySelector("#savedNav")
+savedNav.addEventListener('click', () => {
+    dashboard.style.display = 'none'
+    dashboardNav.style.backgroundColor = '#FFFFFF'
+    dashboardNav.style.color = '#000000'
+    profile.style.display = 'none'
+    profileNav.style.backgroundColor = '#FFFFFF'
+    profileNav.style.color = '#000000'
+    downloadedCards.style.display = 'none'
+    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
+    downloadedCardsNav.style.color = '#000000'
+    savedCards.style.display = 'block'
+    savedNav.style.backgroundColor = '#F3691B'
+    savedNav.style.color = '#FFFFFF'
+})
 
 
 // Users Detials Edit and Submit 
