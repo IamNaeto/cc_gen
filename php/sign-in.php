@@ -24,6 +24,7 @@
 				$_SESSION["username"] = $row['username'];
 				$_SESSION["firstname"] = $row['firstname'];
 				$_SESSION["surname"] = $row['surname'];
+				$_SESSION["email"] = $row['email'];
 				header("location: ../html/card-gen.php");
     			} else {
         			// Password is incorrect

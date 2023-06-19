@@ -115,7 +115,7 @@
 
                 <div class="dashhead-user">
                 <i class="fa fa-user-circle"></i>
-                <p>User</p>
+		<p><?php echo $_SESSION['firstname']; ?></p>
                 <div class="user-prop">
                     <i class="fa fa-chevron-circle-down" id="user-icon"></i>
                 <div class="user-links">
@@ -132,27 +132,27 @@
             <div class="profile-box">
                 <div class="profile-photo">
                     <i class="fa fa-user-circle"></i>
-                    <h1>Users FullName</h1>
-                    <p>useremail@gmail.com</p>
+                    <h1><?php echo $_SESSION['firstname'].' '.$_SESSION['surname']; ?></h1>
+		    <p><?php echo $_SESSION['email']; ?></p>
                 </div>
                 <div class="profile-details">
                     <h1>Users Details</h1>
-                    <form action="" id="usersDetails">
+                    <form action="../php/edit.php" id="usersDetails">
                         <div class="form-container">
                             <div class="left">
                                 <label for="">First Name</label><br>
-                            <input type="text" value="Users First Name" class="fName" readonly><br>
+				<input type="text" value="<?php echo $_SESSION['firstname']; ?>" class="fName" readonly><br>
     
                             <label for="">Last Name</label><br>
-                            <input type="text" value="Users Last Name" class="lName" readonly><br>
+			    <input type="text" value="<?php echo $_SESSION['surname']; ?>" class="lName" readonly><br>
                             </div>
                             
                             <div class="right">
                                 <label for="">UserName</label><br>
-                            <input type="text" value="UserName" class="userN" readonly><br>
+                            <input type="text" value="<?php echo $_SESSION['username']; ?>" class="userN" readonly><br>
     
                             <label for="">Email Address</label><br>
-                            <input type="email" value="usermail@gmail.com" class="userMail" readonly>
+                            <input type="email" value="<?php echo $_SESSION['email']; ?>" class="userMail" readonly>
                             </div>
                         </div>
 
