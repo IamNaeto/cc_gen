@@ -23,9 +23,7 @@ This is a team portfolio project in partial fulfilment of ALX Software Engineeri
 - Users can download credit card code sample
 - Users see usage example
 - Users can interact with the documentation
-- Users can comment under a design, react and share on social media
-- Downloaded cc design should come with all files (hence, download should be a compressed format)
-- Allow user save data and come back to download
+- Downloaded cc design should come with all files (hence, download should be a png format, front and back of the card)
 
 ## Languages and Tools Used
 
