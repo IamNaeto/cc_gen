@@ -1,34 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     /* border: 2px solid red; */
 }
+
 /* Major container styling */
-.dash-container{
+.dash-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.dash-container h1{
+
+.dash-container h1 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
 }
+
 /* side-bar styling */
-.side-bar{
+.side-bar {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     width: 20%;
     height: 100px;
 }
-.bar-menu{
+
+.bar-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,11 +41,13 @@
     position: relative;
     top: -200px;
 }
-.side-img{
+
+.side-img {
     width: 100px;
-    margin: 0  auto 30px;
+    margin: 0 auto 30px;
 }
-.side-bar p{
+
+.side-bar p {
     width: 100%;
     height: 50px;
     padding: 5px 10px;
@@ -53,45 +60,57 @@
     align-items: center;
     margin-bottom: 5px;
 }
-.side-bar p:hover{
+
+.side-bar p:hover {
     background: #F3691B;
     color: #FFFFFF;
     cursor: pointer;
-    
+
 }
-.side-bar p img{
+
+.side-bar p img {
     margin-right: 10px;
 }
-.side-bar .current{
+
+.side-bar .current {
     background: #F3691B;
     color: #FFFFFF;
 }
+
 /* dashboard styling */
-.dashboard{
+.dashboard {
     width: 80%;
     background: #F9F8FE;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px 50px;
 }
-.dash-head{
+
+/* .dashboard-container{
+    display: none;
+} */
+.dash-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.dashhead-user{
+
+.dashhead-user {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.dashhead-user p{
+
+.dashhead-user p {
     margin-right: 50px;
 }
-.dashhead-user .fa{
+
+.dashhead-user .fa {
     font-size: 40px;
     color: #F3691B;
     margin-right: 10px;
 }
-.user-links{
+
+.user-links {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -103,26 +122,30 @@
     border-radius: 10px;
     display: none;
 }
-.user-links a{
+
+.user-links a {
     text-decoration: none;
     color: black;
     margin-bottom: 5px;
 }
-.user-links a:hover{
+
+.user-links a:hover {
     color: #F3691B;
     text-decoration: underline;
 }
-#user-icon{
+
+#user-icon {
     position: relative;
     cursor: pointer;
 }
-.user-prop:hover .user-links{
+
+.user-prop:hover .user-links {
     display: flex;
     cursor: pointer;
 }
 
 /* User info section */
-.dashboard .users-info{
+.dashboard .users-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,38 +155,43 @@
     margin: 20px 0;
     border-radius: 10px;
 }
-.users-info h2{
+
+.users-info h2 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
 }
-.users-info p{
+
+.users-info p {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
 }
-.info{
+
+.info {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.info .fa{
+
+.info .fa {
     font-size: 50px;
     margin-right: 10px;
     color: #F3691B;
 }
 
 /* actions sec styling */
-.actions{
+.actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.sec{
+
+.sec {
     width: 45%;
     background-color: #FFFFFF;
     display: flex;
@@ -172,27 +200,32 @@
     padding: 10px;
     border-radius: 10px;
 }
-.sec img{
+
+.sec img {
     margin-right: 20px;
 }
 
 /* downloaded card section styling */
-.downloads-details{
+.downloads-details {
     background-color: #FFFFFF;
     padding: 10px 20px;
     border-radius: 10px;
     margin: 20px 0;
 }
-.downloads-details table{
+
+.downloads-details table {
     width: 100%;
     margin: 20px 0;
 }
-.downloads-details table, th, tr{
+
+.downloads-details table,
+th,
+tr {
     padding: 5px;
 }
 
 /* Footer sec styling */
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -200,39 +233,48 @@ footer{
     padding: 20px 50px;
     background-color: #000000;
     color: #FFFFFF;
+    position: relative;
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
-footer a .fa{
+
+footer a .fa {
     font-size: 20px;
     color: #FFFFFF;
     margin-right: 10px;
     transition: 0.5s;
 }
-footer a .fa:hover{
+
+footer a .fa:hover {
     color: #F3691B;
 }
-.foot-links a{
+
+.foot-links a {
     font-size: 14px;
     margin: 0 3px;
     color: #FFFFFF;
     transition: 0.5s;
 }
-.foot-links a:hover{
+
+.foot-links a:hover {
     color: #F3691B;
     text-decoration: underline;
 }
-/* Profile section styling */
-.profile-container{
+
+/* Profile dashboard section styling */
+.profile-container {
     display: none;
 }
-.profile-box{
+
+.profile-box {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
 }
-.profile-photo{
+
+.profile-photo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,43 +284,51 @@ footer a .fa:hover{
     height: 500px;
     width: 38%;
 }
-.profile-photo .fa{
+
+.profile-photo .fa {
     font-size: 100px;
     color: #F3691B;
     margin-bottom: 20px;
 }
-.profile-photo h1{
+
+.profile-photo h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
 }
-.profile-details{
+
+.profile-details {
     width: 60%;
     padding: 20px;
     background-color: #FFFFFF;
 }
-form{
+
+form {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     margin: 30px 0;
 }
-.form-container{
+
+.form-container {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-form div{
+
+form div {
     width: 50%;
 }
-form .left{
+
+form .left {
     margin-right: 20px;
 }
-form input{
+
+form input {
     outline: none;
     width: 100%;
     height: 40px;
@@ -288,7 +338,8 @@ form input{
     margin-bottom: 30px;
     background-color: #FFFFFF;
 }
-.btn{
+
+.btn {
     background: linear-gradient(134deg, #EB001B -43.28%, #F79E1B 97%);
     color: #FFFFFF;
     font-size: 18px;
@@ -296,4 +347,60 @@ form input{
     padding: 5px 10px 10px;
     cursor: pointer;
     border: 2px solid #F79E1B;
+}
+
+/* downloaded card dashboard styling */
+.download-wrapper {
+    display: none;
+    position: relative;
+}
+
+.download-history {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.download-num {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    width: 40%;
+}
+
+.card-search {
+    width: 60%;
+}
+
+.card-search p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.card-search .cardNameInput {
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #E9E9E9;
+    width: 60%;
+}
+
+#search {
+    width: 25%;
+    padding: 10px;
+    background: linear-gradient(134deg, #EB001B -43.28%, #F79E1B 97%);
+    border-radius: 5px;
+    color: #FFFFFF;
+    border: 1px solid #F79E1B;
+    cursor: pointer;
+}
+
+.saved-wrapper {
+    display: none;
 }
