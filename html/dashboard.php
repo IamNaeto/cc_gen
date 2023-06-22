@@ -144,7 +144,7 @@
                     </div>
                     <div class="profile-details">
                         <h1>Users Details</h1>
-                        <form action="#profile" id="usersDetails">
+                        <form action="../php/edit.php" id="usersDetails">
 			    <div class="form-container">
 				<div class="left">
                                 	<label for="">First Name</label><br>

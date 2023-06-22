@@ -1,14 +1,10 @@
 <?php
 	session_start();
-    //if(isset($_POST['ctype'])) {
-	//Variables gotten from form to be used in session
-	//$fname = $_POST['fname'];
+
 	$card_type = $_POST['ctype'];
 	$card_no = $_POST['cnumber'];
 	$cvv = $_POST['cardvv'];
 	$exp_date = $_POST['expDate'];
-	// Secure password using has + salting
-	//$hash = password_hash($password, PASSWORD_DEFAULT);
 
 	//Database connection
 	$conn = new mysqli('localhost','root','password','cc_gen');
