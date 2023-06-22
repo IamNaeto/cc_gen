@@ -91,7 +91,6 @@
                     <h1>Downloaded Cards</h1>
                     <table class="table table-bordered">
                         <thead>
-                                <th>S/N</th>
                                 <th>Card Type</th>
                                 <th>Card Number</th>
                                 <th>CVV</th>
@@ -144,22 +143,22 @@
                     </div>
                     <div class="profile-details">
                         <h1>Users Details</h1>
-                        <form action="../php/edit.php" id="usersDetails">
+                        <form action="#profile" id="usersDetails">
 			    <div class="form-container">
 				<div class="left">
                                 	<label for="">First Name</label><br>
-                                	<input type="text" value="<?php echo $_SESSION['firstname']; ?>" class="fName" readonly><br>
+                                	<input type="text" name="fname" value="<?php echo $_SESSION['firstname']; ?>" class="fName" readonly><br>
 
                             		<label for="">Last Name</label><br>
-                           		<input type="text" value="<?php echo $_SESSION['surname']; ?>" class="lName" readonly><br>
+                           		<input type="text" name="lname" value="<?php echo $_SESSION['surname']; ?>" class="lName" readonly><br>
                            	</div>
 
                            	<div class="right">
                                 	<label for="">UserName</label><br>
-                            		<input type="text" value="<?php echo $_SESSION['username']; ?>" class="userN" readonly><br>
+                            		<input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" class="userN" readonly><br>
 
                             		<label for="">Email Address</label><br>
-                            		<input type="email" value="<?php echo $_SESSION['email']; ?>" class="userMail" readonly>
+                            		<input type="email" name="email" value="<?php echo $_SESSION['email']; ?>" class="userMail" readonly>
                            	</div>
                             </div>
 
@@ -209,48 +208,26 @@
                 </div>
 
                 <div class="downloads-details">
-                    <table class="table table-bordered">
-                        <thead>
-                            <th>S/N</th>
-                            <th>Card Type</th>
-                            <th>Card Number</th>
-                            <th>CVV</th>
-                            <th>Expiry Date</th>
+		    <table class="table table-bordered">
+			 <thead>
+                                <th>Card Type</th>
+                                <th>Card Number</th>
+                                <th>CVV</th>
+                                <th>Expiry Date</th>
                         </thead>
-                        <tbody>
-                            <?php
-                            if(is_array($fetchData)){
-                                    $sn=1;
-                                    foreach($fetchData as $data){
-                    ?>
-                            <tr>
-                                <td>
-                                    <?php echo $sn; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['fullName']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['gender']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['email']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['mobile']??''; ?>
-                                </td>
-                            </tr>
-                            <?php
-                            $sn++;  }} else { ?>
-                            <tr>
-                                <td colspan="8">
-                                    <?php echo $fetchData; ?>
-                                </td>
-                            <tr>
-                                <?php
-                    }?>
-                        </tbody>
-                    </table>
+                  	<tbody>
+                        <?php
+                                while($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                                <tr>
+                                        <td><?php echo $row['card_type']; ?></td>
+                                        <td><?php echo $row['card_number']; ?></td>
+                                        <td><?php echo $row['cvv']; ?></td>
+                                        <td><?php echo $row['expiry_date']; ?></td>
+                                </tr>
+                        <?php } ?>
+                   	</tbody>
+                   </table>
                 </div>
             </div>
 
@@ -293,46 +270,24 @@
 
                 <div class="downloads-details">
                     <table class="table table-bordered">
-                        <thead>
-                            <th>S/N</th>
-                            <th>Card Type</th>
-                            <th>Card Number</th>
-                            <th>CVV</th>
-                            <th>Expiry Date</th>
+			 <thead>
+                                <th>Card Type</th>
+                                <th>Card Number</th>
+                                <th>CVV</th>
+                                <th>Expiry Date</th>
                         </thead>
-                        <tbody>
-                            <?php
-                            if(is_array($fetchData)){
-                                    $sn=1;
-                                    foreach($fetchData as $data){
-                    ?>
-                            <tr>
-                                <td>
-                                    <?php echo $sn; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['fullName']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['gender']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['email']??''; ?>
-                                </td>
-                                <td>
-                                    <?php echo $data['mobile']??''; ?>
-                                </td>
-                            </tr>
-                            <?php
-                            $sn++;  }} else { ?>
-                            <tr>
-                                <td colspan="8">
-                                    <?php echo $fetchData; ?>
-                                </td>
-                            <tr>
-                                <?php
-                    }?>
-                        </tbody>
+                   	<tbody>
+                        	<?php
+                                while($row = mysqli_fetch_assoc($result)) {
+                        	?>
+                                <tr>
+                                        <td><?php echo $row['card_type']; ?></td>
+                                        <td><?php echo $row['card_number']; ?></td>
+                                        <td><?php echo $row['cvv']; ?></td>
+                                        <td><?php echo $row['expiry_date']; ?></td>
+                                </tr>
+                        	<?php } ?>
+                   	</tbody>			
                     </table>
                 </div>
             </div>

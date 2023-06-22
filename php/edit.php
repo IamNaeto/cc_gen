@@ -17,10 +17,10 @@
 		$stmt = $conn->prepare("update Customer set firstname=?, surname=?, email=?, username=? WHERE username=?");
 		$stmt->bind_param("sssss",$fname, $lname, $email, $new_username, $_SESSION['username']);
 		$stmt->execute();
-		$_SESSION["username"] = $new_username;
-                $_SESSION["firstname"] = $fname;
-                $_SESSION["surname"] = $lname;
-                $_SESSION["email"] = $email;
+		//$_SESSION["username"] = $new_username;
+               // $_SESSION["firstname"] = $fname;
+               // $_SESSION["surname"] = $lname;
+                //$_SESSION["email"] = $email;
 		echo "Edited Successfully...";
 		//close connection to database and return to sign in page
 		header("location: ../html/dashboard.php");

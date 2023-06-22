@@ -93,5 +93,5 @@ saveBtn.addEventListener('click', (event) => {
     usersMail.setAttribute("readonly", "readonly");
     usersForm.submit();
     saveBtn.setAttribute("disabled", "disabled");
-    
+    window.location.href="../php/edit.php";
 });
