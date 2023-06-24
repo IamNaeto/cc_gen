@@ -1,4 +1,5 @@
-// Side bar navigations
+function navBarChange(){
+    // Side bar navigations
 const dashboard = document.querySelector('.dashboard-container')
 const profile = document.querySelector('.profile-container')
 const downloadedCards = document.querySelector('.download-wrapper')
@@ -22,15 +23,12 @@ profileNav.addEventListener('click', () => {
     dashboard.style.display = 'none'
     dashboardNav.style.backgroundColor = '#FFFFFF'
     dashboardNav.style.color = '#000000'
-    downloadedCards.style.display = 'none'
-    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
-    downloadedCardsNav.style.color = '#000000'
-    savedCards.style.display = 'none'
-    savedNav.style.backgroundColor = '#FFFFFF'
-    savedNav.style.color = '#000000'
     profile.style.display = 'block'
     profileNav.style.backgroundColor = '#F3691B'
     profileNav.style.color = '#FFFFFF'
+    downloadedCards.style.display = 'none'
+    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
+    downloadedCardsNav.style.color = '#000000'
 })
 
 const downloadedCardsNav = document.querySelector("#downloadNav")
@@ -41,30 +39,13 @@ downloadedCardsNav.addEventListener('click', () => {
     profile.style.display = 'none'
     profileNav.style.backgroundColor = '#FFFFFF'
     profileNav.style.color = '#000000'
-    savedCards.style.display = 'none'
-    savedNav.style.backgroundColor = '#FFFFFF'
-    savedNav.style.color = '#000000'
     downloadedCards.style.display = 'block'
     downloadedCardsNav.style.backgroundColor = '#F3691B'
     downloadedCardsNav.style.color = '#FFFFFF'
 })
-
-const savedNav = document.querySelector("#savedNav")
-savedNav.addEventListener('click', () => {
-    dashboard.style.display = 'none'
-    dashboardNav.style.backgroundColor = '#FFFFFF'
-    dashboardNav.style.color = '#000000'
-    profile.style.display = 'none'
-    profileNav.style.backgroundColor = '#FFFFFF'
-    profileNav.style.color = '#000000'
-    downloadedCards.style.display = 'none'
-    downloadedCardsNav.style.backgroundColor = '#FFFFFF'
-    downloadedCardsNav.style.color = '#000000'
-    savedCards.style.display = 'block'
-    savedNav.style.backgroundColor = '#F3691B'
-    savedNav.style.color = '#FFFFFF'
-})
-
+}
+// Calling of the function so that anything the sidebar is clicked on, it will change
+navBarChange()
 
 // Users Detials Edit and Submit 
 const usersForm = document.querySelector('#usersDetails');

@@ -19,12 +19,11 @@
     <div class="dash-container">
         <!-- side bar section -->
         <div class="side-bar">
-            <div class="bar-menu">
-                <img src="../img/Logo.png" alt="" class="side-img">
-                <p class="current" id="dashboardNav"><img src="../img/Dashboard.png" alt=""> Dashboard</p>
-                <p id="profileNav"><img src="../img/User.png" alt=""> Profile</p>
-                <p id="downloadNav"> <img src="../img/import.png" alt="">Downloaded Cards</p>
-                <p id="savedNav"><img src="../img/folder.png" alt=""> Saved Cards</p>
+            <div class="bar-menu" id="menu">
+                <img src="../img/Logo.png" alt="" class="side-img" id="side-logo">
+                <p class="current" id="dashboardNav"><img src="../img/Dashboard.png" alt=""><span> Dashboard</span></p>
+                <p id="profileNav"><img src="../img/User.png" alt=""><span>Profile</span></p>
+                <p id="downloadNav"> <img src="../img/import.png" alt=""><span>Downloaded Cards</span></p>
             </div>
         </div>
         <!-- dashboard section -->
@@ -175,21 +174,20 @@
                 <div class="dash-head">
                     <h1>Downloaded Cards<h1>
 
-                            <div class="dashhead-user">
-                                <i class="fa fa-user-circle"></i>
-                                <p>User</p>
-                                <div class="user-prop">
-                                    <i class="fa fa-chevron-circle-down" id="user-icon"></i>
-                                    <div class="user-links">
-                                        <a href="">Home</a>
-                                        <a href="">Card Library</a>
-                                        <a href="">Documentations</a>
-                                        <a href="">About</a>
-                                        <a href="">Sign Out</a>
+                        <div class="dashhead-user">
+                            <i class="fa fa-user-circle"></i>
+                            <p><?php echo $_SESSION['firstname']; ?></p>
+                                        <div class="user-prop">
+                                            <i class="fa fa-chevron-circle-down" id="user-icon"></i>
+                                            <div class="user-links">
+                                                <a href="">Home</a>
+                                                <a href="">Card Library</a>
+                                                <a href="">Documentations</a>
+                                                <a href="">About</a>
+                                                <a href="">Sign Out</a>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                </div>
-                            </div>
                 </div>
                 <!-- download history -->
                 <div class="download-history">
@@ -231,66 +229,6 @@
                 </div>
             </div>
 
-            <!-- saved cards dashboard -->
-            <div class="saved-wrapper">
-                <div class="dash-head">
-                    <h1>Saved Cards<h1>
-
-                            <div class="dashhead-user">
-                                <i class="fa fa-user-circle"></i>
-                                <p>User</p>
-                                <div class="user-prop">
-                                    <i class="fa fa-chevron-circle-down" id="user-icon"></i>
-                                    <div class="user-links">
-                                        <a href="">Home</a>
-                                        <a href="">Card Library</a>
-                                        <a href="">Documentations</a>
-                                        <a href="">About</a>
-                                        <a href="">Sign Out</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                </div>
-                <!-- saved history -->
-                <div class="download-history">
-                    <div class="download-num">
-                        <h3>All Saved Cards </h3>
-                        <h3>(0)</h3>
-                    </div>
-
-                    <div class="card-search">
-                        <p>Quick search a card</p>
-                        <div>
-                            <input type="text" placeholder="Enter Card Name" class="cardNameInput">
-                            <input type="submit" value="Search" id="search">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="downloads-details">
-                    <table class="table table-bordered">
-			 <thead>
-                                <th>Card Type</th>
-                                <th>Card Number</th>
-                                <th>CVV</th>
-                                <th>Expiry Date</th>
-                        </thead>
-                   	<tbody>
-                        	<?php
-                                while($row = mysqli_fetch_assoc($result)) {
-                        	?>
-                                <tr>
-                                        <td><?php echo $row['card_type']; ?></td>
-                                        <td><?php echo $row['card_number']; ?></td>
-                                        <td><?php echo $row['cvv']; ?></td>
-                                        <td><?php echo $row['expiry_date']; ?></td>
-                                </tr>
-                        	<?php } ?>
-                   	</tbody>			
-                    </table>
-                </div>
-            </div>
         </div>
 
     </div>

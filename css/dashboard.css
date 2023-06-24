@@ -11,9 +11,10 @@
 /* Major container styling */
 .dash-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     width: 100%;
+    position: relative;
 }
 
 .dash-container h1 {
@@ -30,7 +31,7 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 20%;
-    height: 100px;
+    padding-top: 20px;
 }
 
 .bar-menu {
@@ -38,8 +39,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: relative;
-    top: -200px;
 }
 
 .side-img {
@@ -123,13 +122,14 @@
     display: none;
 }
 
-.user-links a {
+.user-prop .user-links a {
     text-decoration: none;
     color: black;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
-.user-links a:hover {
+.user-prop .user-links a:hover {
     color: #F3691B;
     text-decoration: underline;
 }
@@ -403,4 +403,272 @@ form input {
 
 .saved-wrapper {
     display: none;
+}
+
+/********Media Query******/
+
+@media screen and (max-width: 1058px) {
+    .dashboard {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .side-bar p>span {
+        display: none;
+    }
+
+    .side-bar p {
+        justify-content: center;
+    }
+
+    .sec {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 716px) {
+    #side-logo {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    .side-bar p {
+        width: 100%;
+    }
+
+    .side-bar p img {
+        margin-right: 0;
+    }
+
+    .side-bar #menu {
+        width: 100%;
+    }
+
+    .dashboard {
+        padding: 10px;
+    }
+
+    .dash-container h1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .dashhead-user p {
+        margin-right: 50px;
+        font-size: 14px;
+    }
+
+    .dashhead-user .fa {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .dashboard .users-info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    .users-info h2 {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .users-info p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info .fa {
+        margin-right: 0;
+    }
+
+    .lastlog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 8px;
+    }
+
+    .lastlog h3 {
+        font-size: 16px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .sec {
+        width: 100%;
+        justify-content: left;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+
+    .sec:nth-child(1) {
+        margin-bottom: 10px;
+    }
+
+    .downloads-details {
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
+    .downloads-details table,
+    th,
+    tr {
+        padding: 1px;
+    }
+
+    .downloads-details table {
+        font-size: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+    .foot-links a {
+        font-size: 13px;
+    }
+
+    /* profile */
+    .profile-box {
+        flex-direction: column;
+        margin: 15px 0;
+    }
+
+    .profile-photo {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .profile-photo .fa {
+        font-size: 80px;
+        margin-bottom: 10px;
+    }
+
+    .profile-photo h1 {
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .profile-photo p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .profile-details {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    form {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .form-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    form div {
+        width: 100%;
+    }
+
+    form .left {
+        margin-right: 0;
+    }
+
+    form input {
+        margin-bottom: 15px;
+    }
+
+    /* downloaded card */
+    /* downloaded card dashboard styling */
+    .download-wrapper {
+        display: none;
+        position: relative;
+    }
+
+    .download-history {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    .download-num {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .download-num h3 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .card-search {
+        width: 100%;
+    }
+
+    .card-search div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-search p {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .card-search .cardNameInput {
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #search {
+        width: 50%;
+        padding: 10px;
+        background: linear-gradient(134deg, #EB001B -43.28%, #F79E1B 97%);
+        border-radius: 5px;
+        color: #FFFFFF;
+        border: 1px solid #F79E1B;
+        cursor: pointer;
+    }
+
+    .saved-wrapper {
+        display: none;
+    }
+
 }
