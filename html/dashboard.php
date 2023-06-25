@@ -21,7 +21,9 @@
         <!-- side bar section -->
         <div class="side-bar">
             <div class="bar-menu" id="menu">
+                <a href="index.php">
                 <img src="../img/Logo.png" alt="" class="side-img" id="side-logo">
+                </a>
                 <p class="current" id="dashboardNav"><img src="../img/Dashboard.png" alt=""><span> Dashboard</span></p>
                 <p id="profileNav"><img src="../img/User.png" alt=""><span>Profile</span></p>
                 <p id="downloadNav"> <img src="../img/import.png" alt=""><span>Downloaded Cards</span></p>
