@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <!-- downloaded cards sec -->
+		<!-- downloaded cards sec -->
                 <div class="downloads-details">
                     <h1>Downloaded Cards</h1>
                     <table class="table table-bordered">
@@ -169,8 +169,14 @@
 
             </div>
 
-            <!-- downloaded cards dashboard -->
-            <div class="download-wrapper">
+	    <!-- downloaded cards dashboard -->
+	    <div class="download-wrapper">
+		<?php
+			session_start();
+			require_once("../php/connect.php");
+        		$query = "SELECT * FROM card_details WHERE username = '{$_SESSION['username']}'";
+			$result = mysqli_query($conn, $query);
+		?>
                 <div class="dash-head">
                     <h1>Downloaded Cards<h1>
 

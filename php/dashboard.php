@@ -6,7 +6,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	// Secure password using has + salting
-	$hash = password_hash($password, PASSWORD_DEFAULT);
+	// $hash = password_hash($password, PASSWORD_DEFAULT);
 
 	//Database connection
 	$conn = new mysqli('localhost','root','password','cc_gen');
