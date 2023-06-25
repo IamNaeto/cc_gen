@@ -1,3 +1,5 @@
+import { increaseCount } from "./dashboard"; 
+
 const generateBtn = document.querySelector('#generate');
 const cardNum = document.querySelector('.card-num');
 const cardbrand = document.querySelector('.cardbrand');
@@ -162,8 +164,8 @@ downloadButton.addEventListener('click', (event) => {
     const backCardToDownload = document.getElementById('cardBack');
 
     // Download both cards sequentially
-    downloadDivAsImage(cardToDownload, 'cardFront.png');
     downloadDivAsImage(backCardToDownload, 'cardBack.png');
+    downloadDivAsImage(cardToDownload, 'cardFront.png');
 
     // Prepare the form data
     const formData = new FormData();

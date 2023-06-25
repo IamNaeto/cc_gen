@@ -11,8 +11,6 @@
 /* Major container styling */
 .dash-container {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     width: 100%;
     position: relative;
 }
@@ -182,6 +180,9 @@
     font-size: 50px;
     margin-right: 10px;
     color: #F3691B;
+}
+.lastlog h3{
+    text-align: center;
 }
 
 /* actions sec styling */

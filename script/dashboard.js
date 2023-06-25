@@ -68,6 +68,18 @@ editBtn.addEventListener('click', (event) => {
 
 saveBtn.addEventListener('click', (event) => {
     event.preventDefault();
+    // Get the updated values from the input fields
+    const updatedFName = usersFName.value;
+    const updatedLName = usersLName.value;
+    const updatedUName = usersUName.value;
+    const updatedMail = usersMail.value;
+    // Set the input field values to the updated values
+    usersFName.value = updatedFName;
+    usersLName.value = updatedLName;
+    usersUName.value = updatedUName;
+    usersMail.value = updatedMail;
+
+    // Disable the input fields
     usersFName.setAttribute("readonly", "readonly");
     usersLName.setAttribute("readonly", "readonly");
     usersUName.setAttribute("readonly", "readonly");
@@ -76,3 +88,49 @@ saveBtn.addEventListener('click', (event) => {
     saveBtn.setAttribute("disabled", "disabled");
     window.location.href="../php/edit.php";
 });
+
+
+// Updating last seen
+const lastSeenElement = document.getElementById('lastSeen');
+
+function updateLastSeen() {
+  const currentDate = new Date();
+
+  const options = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  };
+
+  const formattedDate = currentDate.toLocaleDateString(undefined, options);
+  const formattedTime = currentDate.toLocaleTimeString();
+
+  lastSeenElement.textContent = `${formattedDate} at ${formattedTime}`;
+}
+
+updateLastSeen();
+
+setInterval(updateLastSeen, 60000);
+
+
+/****** Tried to increase download and saved card count but didnt work, would get back to it.
+******/
+  // Increasing download and saved card counts on dashboard
+    const countElement = document.getElementById('loadCount');
+    const countElement2 = document.getElementById('savedCount');
+
+    // Initialize the count variable
+    let count = 0;
+
+    // Function to update the count element
+    function updateCount() {
+      countElement.innerHTML = count;
+      countElement2.innerHTML = count;
+    }
+
+    // Function to increase the count
+    function increaseCount() {
+      count++; // Increase the count
+      updateCount(); // Update the count element
+    }
